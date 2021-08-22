@@ -5,4 +5,20 @@ By Xiangyu Chen*, Zhengwen Zhang*, [Jimmy S. Ren](https://scholar.google.com.hk/
 
 (* indicates equal contribution)
 
+## Overview
+Simplified SDRTV/HDRTV formation pipeline:
+<img src="https://raw.githubusercontent.com/chxy95/HDRTVNet/master/images/Formation_Pipeline.png" width="600"/>
+
+Overview of the method:
+<img src="https://raw.githubusercontent.com/chxy95/HDRTVNet/master/images/Network_Structure.png" width="600"/>
+
+## Getting Started
+
+1. [Dataset](#dataset)
+2. [Configuration](#configuration)
+3. [How to test](#how-to-test)
+4. [How to train](#how-to-train)
+5. [Visualization](#visualization)
+
+
 ## Waiting to update...

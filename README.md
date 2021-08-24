@@ -5,14 +5,18 @@ By Xiangyu Chen*, Zhengwen Zhang*, [Jimmy S. Ren](https://scholar.google.com.hk/
 
 (* indicates equal contribution)
 
+**This paper is accepted to ICCV 2021.**
+
 ## Still Updating （Aug. 23th, 2021）...
 
 ## Overview
 Simplified SDRTV/HDRTV formation pipeline:
-<img src="https://raw.githubusercontent.com/chxy95/HDRTVNet/master/images/Formation_Pipeline.png" width="600"/>
+
+<img src="https://raw.githubusercontent.com/chxy95/HDRTVNet/master/figures/Formation_Pipeline.png" width="600"/>
 
 Overview of the method:
-<img src="https://raw.githubusercontent.com/chxy95/HDRTVNet/master/images/Network_Structure.png" width="600"/>
+
+<img src="https://raw.githubusercontent.com/chxy95/HDRTVNet/master/figures/Network_Structure.png" width="900"/>
 
 ## Getting Started
 
@@ -24,9 +28,9 @@ Overview of the method:
 6. [Visualization](#visualization)
 
 ### Dataset
-We conduct a dataset using videos with 4K resolutions under HDR10 standard and their counterpart SDR versions from Youtube. The dataset consists of a training set with 1235 image pairs and a test set with 117 image pairs. Please refer to the paper for the details on the processing of the dataset. The dataset can be downloaded from [Baidu Netdisk](https://pan.baidu.com/s/1TwXnBzeV6TlD3zPvuEo8IQ) (code: 6qvu) or [OneDrive](https://uofmacau-my.sharepoint.com/:f:/g/personal/yc17494_umac_mo/Ep6XPVP9XX9HrZDUR9SmjdkB-t1NSAddMIoX3iJmGwqW-Q?e=dNODeW) (code: HDRTVNet).
+We conduct a dataset using videos with 4K resolutions under HDR10 standard (10-bit, Rec.2020, PQ) and their counterpart SDR versions from Youtube. The dataset consists of a training set with 1235 image pairs and a test set with 117 image pairs. Please refer to the paper for the details on the processing of the dataset. The dataset can be downloaded from [Baidu Netdisk](https://pan.baidu.com/s/1TwXnBzeV6TlD3zPvuEo8IQ) (access code: 6qvu) or [OneDrive](https://uofmacau-my.sharepoint.com/:f:/g/personal/yc17494_umac_mo/Ep6XPVP9XX9HrZDUR9SmjdkB-t1NSAddMIoX3iJmGwqW-Q?e=dNODeW) (access code: HDRTVNet).
 
-We also provide the original Youtube links of these videos, which can be found in this [file](https://raw.githubusercontent.com/chxy95/HDRTVNet/master/links.txt). Note that we cannot provide the download links since we do not have the copyright to distribute. **Please download this dataset only for academic use.**
+We also provide the original Youtube links of these videos, which can be found in this [file](https://raw.githubusercontent.com/chxy95/HDRTVNet/master/video_links.txt). Note that we cannot provide the download links since we do not have the copyright to distribute. **Please download this dataset only for academic use.**
 
 ### Configuration
 
@@ -34,7 +38,7 @@ Please refer to the [requirements](https://raw.githubusercontent.com/chxy95/HDRT
 
 ### How to test
 
-We provide the pretrained models to test, which can be downloaded from [Baidu Netdisk](https://pan.baidu.com/s/1OSLVoBioyen-zjvLmhbe2g) (code: 2me9) or [OneDrive](https://uofmacau-my.sharepoint.com/:f:/g/personal/yc17494_umac_mo/EteMb8FVYE5GqILE2mV-1W8B0-S_ynjt2gAgHkDH9LgkMg?e=EnBn3Q) (code: HDRTVNet). Since our method is casaded of three steps, the results also need to be inferenced step by step. 
+We provide the pretrained models to test, which can be downloaded from [Baidu Netdisk](https://pan.baidu.com/s/1OSLVoBioyen-zjvLmhbe2g) (access code: 2me9) or [OneDrive](https://uofmacau-my.sharepoint.com/:f:/g/personal/yc17494_umac_mo/EteMb8FVYE5GqILE2mV-1W8B0-S_ynjt2gAgHkDH9LgkMg?e=EnBn3Q) (access code: HDRTVNet). Since our method is casaded of three steps, the results also need to be inferenced step by step. 
 
 - For the first part of AGCM, make sure the paths of `dataroot_LQ`, `dataroot_GT` and `pretrain_model_G` in `./codes/options/test/test_AGCM.yml` are correct, then run
 ```

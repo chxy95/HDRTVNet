@@ -1,0 +1,13 @@
+torchvision==0.4.2+cu100
+colour==0.1.5
+lmdb==1.0.0
+torch==1.3.1+cu100
+numpy==1.18.5
+scipy==1.4.1
+opencv_contrib_python==4.2.0.34
+matplotlib==3.4.3
+Pillow==8.3.1
+PyYAML==5.4.1
+seaborn==0.11.2
+tensorboardX==2.4
+torchsummary==1.5.1

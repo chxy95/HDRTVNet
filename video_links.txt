@@ -1,0 +1,26 @@
+video links of training set:
+https://www.youtube.com/watch?v=7Y9nX0QHqzA&list=PLX4aFjxR0Edu0YlgF0g3rypCxmgxFm9IS&index=5
+https://www.youtube.com/watch?v=bON-KPiiNCk
+https://www.youtube.com/watch?v=PxdZcvhtwzc
+https://www.youtube.com/watch?v=GOE7S_usVXc&t=166s
+https://www.youtube.com/watch?v=FcEVbVrNIyg
+https://www.youtube.com/watch?v=ESxn1cLz-Ig
+https://www.youtube.com/watch?v=W8oyStWkoSE&t=7s
+https://www.youtube.com/watch?v=h21qM1Y-Bog
+https://www.youtube.com/watch?v=mkggXE5e2yk
+https://www.youtube.com/watch?v=9jWF1yxbZbA
+https://www.youtube.com/watch?v=UmSa8tnJ97k&list=PLPUsWEjFwZ3zIGxLzrM0wQ0JM4AOvcH1A&index=23
+https://www.youtube.com/watch?v=xtmbLFwR19o
+https://www.youtube.com/watch?v=690ruSjMNoA
+https://www.youtube.com/watch?v=0rTv2EGmjqI
+https://www.youtube.com/watch?v=evXH5IpAsTM&list=PLX4aFjxR0Edu0YlgF0g3rypCxmgxFm9IS&index=3
+samsung: https://www.youtube.com/watch?v=T3-_RW99h3U
+https://www.youtube.com/watch?v=aoApRzmhb-I
+https://www.youtube.com/watch?v=UmSa8tnJ97k&list=PLPUsWEjFwZ3zIGxLzrM0wQ0JM4AOvcH1A&index=23
+
+
+video links of test set:
+https://www.youtube.com/watch?v=bpfu7biLT5c
+https://www.youtube.com/watch?v=KtYYMigpQVM
+https://www.youtube.com/watch?v=HrI5o9Sv6vo
+https://www.youtube.com/watch?v=k1Ud2s72mes

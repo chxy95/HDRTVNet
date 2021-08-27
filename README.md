@@ -7,7 +7,7 @@ By Xiangyu Chen*, Zhengwen Zhang*, [Jimmy S. Ren](https://scholar.google.com.hk/
 
 **This paper is accepted to ICCV 2021.**
 
-## Still Updating （Aug. 24th, 2021）...
+## The codes will be updated before Sept. 2021.
 
 ## Overview
 Simplified SDRTV/HDRTV formation pipeline:

@@ -1,0 +1,68 @@
+#### general settings
+name: local_enhancement
+model: base
+use_tb_logger: true
+distortion: sr
+scale: 1
+gpu_ids: [0]
+
+#### datasets
+datasets:
+  train:
+    name: HDRTV1K
+    mode: LQGT_base
+    dataroot_LQ: ../dataset/training_set/AGCM_training_set_res_sub
+    dataroot_GT: ../dataset/training_set/train_hdr_sub
+    use_shuffle: true
+    n_workers: 8
+    batch_size: 16
+    GT_size: 160
+    use_flip: false
+    use_rot: false
+  val:
+    name: HDRTV1K
+    mode: LQGT_base
+    dataroot_LQ: ../dataset/test_set/AGCM_test_set_res
+    dataroot_GT: ../dataset/test_set/test_hdr
+    save_img: false
+
+
+#### network structures
+network_G:
+  which_model_G: SRResNet
+  in_nc: 3
+  out_nc: 3
+  nf: 64
+  nb: 16
+  act_type: relu # | leakyrelu
+
+#### path
+path:
+  root: ./
+  # pretrain_model_G: 
+  strict_load: false
+  # resume_state: 
+
+#### training settings: learning rate scheme, loss
+train:
+  lr_G: !!float 2e-4   #1e-4
+  lr_scheme: MultiStepLR # MultiStepLR | CosineAnnealingLR_Restart
+  beta1: 0.9
+  beta2: 0.99
+  niter: 1000000
+  warmup_iter: -1  # no warm up
+
+  lr_scheme: MultiStepLR
+  lr_steps: [200000, 400000, 600000, 800000]
+  lr_gamma: 0.5
+
+  pixel_criterion: l1
+  pixel_weight: 1.0
+
+  manual_seed: 10
+  val_freq: !!float 5e3
+
+#### logger
+logger:
+  print_freq: 100
+  save_checkpoint_freq: !!float 5e3

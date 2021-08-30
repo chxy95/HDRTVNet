@@ -1,0 +1,68 @@
+#### general settings
+name: adaptive_global_color_mapping
+model: condition
+use_tb_logger: true
+distortion: sr
+scale: 1
+gpu_ids: [0]
+
+#### datasets
+datasets:
+  train:
+    name: HDRTV1K
+    mode: LQGT_condition
+    dataroot_LQ: ../dataset/training_set/train_sdr_sub
+    dataroot_cond: ../dataset/training_set/condition
+    dataroot_GT: ../dataset/training_set/train_hdr_sub
+    cond_scale: 4
+    use_shuffle: true
+    n_workers: 4 # 8
+    batch_size: 4 # 8 | 16
+    GT_size: 480 # 160 | 480 
+    use_flip: false
+    use_rot: false
+  val:
+    name: HDRTV1K
+    mode: LQGT_condition
+    dataroot_LQ: ../dataset/test_set/test_sdr
+    dataroot_cond: ../dataset/test_set/condition
+    dataroot_GT: ../dataset/test_set/test_hdr
+    cond_scale: 4
+    save_img: false
+
+#### network structures
+network_G:
+  which_model_G: ConditionNet
+  classifier: color_condition 
+  cond_c: 6
+
+#### path
+path:
+  root: ./
+  # pretrain_model_G: 
+  strict_load: false
+  # resume_state: 
+
+#### training settings: learning rate scheme, loss
+train:
+  lr_G: !!float 5e-4 
+  lr_scheme: MultiStepLR # MultiStepLR | CosineAnnealingLR_Restart
+  beta1: 0.9
+  beta2: 0.99
+  niter: 1000000 # 600000 
+  warmup_iter: -1  # no warm up
+
+  lr_scheme: MultiStepLR
+  lr_steps: [200000, 400000, 600000, 800000]
+  lr_gamma: 0.5
+
+  pixel_criterion: l1
+  pixel_weight: 1.0
+
+  manual_seed: 10
+  val_freq: !!float 5e3
+
+#### logger
+logger:
+  print_freq: 100
+  save_checkpoint_freq: !!float 5e3

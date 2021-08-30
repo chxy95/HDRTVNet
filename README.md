@@ -7,8 +7,6 @@ By Xiangyu Chen*, Zhengwen Zhang*, [Jimmy S. Ren](https://scholar.google.com.hk/
 
 **This paper is accepted to ICCV 2021.**
 
-## The codes will be updated before Sept. 2021.
-
 ## Overview
 Simplified SDRTV/HDRTV formation pipeline:
 
@@ -34,21 +32,34 @@ We also provide the original Youtube links of these videos, which can be found i
 
 ### Configuration
 
-Please refer to the [requirements](https://raw.githubusercontent.com/chxy95/HDRTVNet/master/requirements.txt).
+Please refer to the [requirements](https://raw.githubusercontent.com/chxy95/HDRTVNet/master/requirements.txt). Matlab is also used to process the data, but it is not necessary and can be replaced by OpenCV.
 
 ### How to test
 
 We provide the pretrained models to test, which can be downloaded from [Baidu Netdisk](https://pan.baidu.com/s/1OSLVoBioyen-zjvLmhbe2g) (access code: 2me9) or [OneDrive](https://uofmacau-my.sharepoint.com/:f:/g/personal/yc17494_umac_mo/EteMb8FVYE5GqILE2mV-1W8B0-S_ynjt2gAgHkDH9LgkMg?e=EnBn3Q) (access code: HDRTVNet). Since our method is casaded of three steps, the results also need to be inferenced step by step. 
 
-- For the first part of AGCM, make sure the paths of `dataroot_LQ`, `dataroot_GT` and `pretrain_model_G` in `./codes/options/test/test_AGCM.yml` are correct, then run
+- Before testing, it is optional to generate the downsampled inputs of the condition network in advance. Make sure the `input_folder` and `save_LR_folder` in `./scripts/generate_mod_LR_bic.m` are correct, then run the file using Matlab. After that, matlab-bicubic-downsampled versions of the input SDR images are generated that will be input to the condition network. Note that this step is not necessary, but can reproduce more precise performance.
+ 
+- For the first part of AGCM, make sure the paths of `dataroot_LQ`, `dataroot_cond`, `dataroot_GT` and `pretrain_model_G` in `./codes/options/test/test_AGCM.yml` are correct, then run
 ```
 cd codes
 python test.py -opt options/test/test_AGCM.yml
 ```
-The test results will be saved to `./results/Adaptive_Global_Color_Mapping`.
 
-- For the second part of LE, modify the `dataroot_LQ` into 
-- For the last part of HG,
+- Note that if the first step is not preformed, the line of `dataroot_cond` should be commented. The test results will be saved to `./results/Adaptive_Global_Color_Mapping`.
+
+- For the second part of LE, make sure `dataroot_LQ` is modified into the path of results obtained by AGCM, then run 
+```
+python test.py -opt options/test/test_LE.yml
+```
+
+- For the last part of HG, make sure `dataroot_LQ` is modified into the path of results obtained by LE, then run 
+```
+python test.py -opt options/test/test_HG.yml
+```
+
+- Note that the results of the each step are 16-bit images that can be converted into HDR10 video.
+
 ### How to train
 
 ### Metrics

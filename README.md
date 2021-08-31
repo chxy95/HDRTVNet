@@ -78,6 +78,8 @@ python train.py -opt options/train/train_HG_GAN.yml
 
 ### Metrics
 
+Five metrics are used to evaluate the quantitative performance of different methods, including PSNR, SSIM, SR_SIM, Delta E<sub>ITP</sub> [(ITU Rec.2124)](https://www.itu.int/dms_pubrec/itu-r/rec/bt/R-REC-BT.2124-0-201901-I!!PDF-E.pdf) and [HDR-VDP3](https://sourceforge.net/projects/hdrvdp/). Since the latter three metrics are not very common in recent papers, we provide some reference codes in `./metrics` for convenient usage.
+
 ### Visualization
 
 ## Citation

@@ -12,7 +12,7 @@ datasets:
     name: HDRTV1K
     mode: LQGT_condition
     dataroot_LQ: ../dataset/training_set/train_sdr_sub
-    dataroot_cond: ../dataset/training_set/condition
+    dataroot_cond: ../dataset/training_set/cond
     dataroot_GT: ../dataset/training_set/train_hdr_sub
     cond_scale: 4
     use_shuffle: true
@@ -25,7 +25,7 @@ datasets:
     name: HDRTV1K
     mode: LQGT_condition
     dataroot_LQ: ../dataset/test_set/test_sdr
-    dataroot_cond: ../dataset/test_set/condition
+    dataroot_cond: ../dataset/test_set/cond
     dataroot_GT: ../dataset/test_set/test_hdr
     cond_scale: 4
     save_img: false

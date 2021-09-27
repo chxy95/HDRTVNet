@@ -96,5 +96,5 @@ If our work is helpful to you, please cite our paper:
       year={2021}
     }
 
-## Acknowledgments
+## Acknowledgment
 The code is inspired by [BasicSR](https://github.com/xinntao/BasicSR).

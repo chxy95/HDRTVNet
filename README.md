@@ -7,7 +7,7 @@ By Xiangyu Chen*, Zhengwen Zhang*, [Jimmy S. Ren](https://scholar.google.com.hk/
 
 **This paper is accepted to ICCV 2021.**
 
-**Recently I will give a detailed interpretation about this paper on Zhihu. The link will be released soon.**
+**I will give a detailed interpretation about this work on Zhihu. The link will be released soon.**
 
 ## Overview
 Simplified SDRTV/HDRTV formation pipeline:

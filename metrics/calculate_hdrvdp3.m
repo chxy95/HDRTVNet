@@ -22,6 +22,7 @@ GT_img = im2double(GT_img);
 LQ_img = PQEOTF(LQ_img);
 GT_img = PQEOTF(GT_img);
 
+ppd = 50;
 res = hdrvdp3('side-by-side', LQ_img, GT_img, 'rgb-bt.2020', ppd, {'rgb_display', 'led-lcd-wcg'});
 
 output = res.Q

@@ -39,12 +39,11 @@ class LQGT_dataset(data.Dataset):
         LQ_path = self.paths_LQ[index]
         img_LQ = util.read_img(None, LQ_path)
 
-        # get mask when mask folder is not None
-        if self.mask_folder is not None:
-            mask_name = osp.basename(LQ_path)[:-4] + '.npy'
-            mask_path = osp.join(self.mask_folder, mask_name)
-            mask = util.read_npy(mask_path)
-            mask = np.expand_dims(mask, 2).repeat(3, axis=2)
+        # get mask of SDR
+        mask_name = osp.basename(LQ_path)[:-4] + '.npy'
+        mask_path = osp.join(self.mask_folder, mask_name)
+        mask = util.read_npy(mask_path)
+        mask = np.expand_dims(mask, 2).repeat(3, axis=2)
 
         if self.opt['phase'] == 'train':
             
@@ -75,11 +74,11 @@ class LQGT_dataset(data.Dataset):
             img_GT = cv2.resize(img_GT, (W_new, H_new))
         
         # use the input LQ to calculate the mask.
-        if self.mask_folder is None:
-            r = 0.95
-            mask = np.max(img_LQ, 2)
-            mask = np.minimum(1.0, np.maximum(0, mask - r) / (1 - r))
-            mask = np.expand_dims(mask, 2).repeat(3, axis=2)
+        # if self.mask_folder is None:
+        #     r = 0.95
+        #     mask = np.max(img_LQ, 2)
+        #     mask = np.minimum(1.0, np.maximum(0, mask - r) / (1 - r))
+        #     mask = np.expand_dims(mask, 2).repeat(3, axis=2)
 
         # BGR to RGB, HWC to CHW, numpy to tensor
         if img_GT.shape[2] == 3:

@@ -73,7 +73,8 @@ class LQGT_dataset(data.Dataset):
             W_new = int(np.ceil(W / 32) * 32)
             img_LQ = cv2.resize(img_LQ, (W_new, H_new))
             img_GT = cv2.resize(img_GT, (W_new, H_new))
-
+        
+        # use the input LQ to calculate the mask.
         if self.mask_folder is None:
             r = 0.95
             mask = np.max(img_LQ, 2)

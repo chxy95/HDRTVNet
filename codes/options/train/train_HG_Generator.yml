@@ -25,7 +25,7 @@ datasets:
     mode: LQGT_hallucination
     dataroot_LQ: ../dataset/test_set/LE_test_set_res_bicx4 # downsampling for fast validation
     dataroot_GT: ../dataset/test_set/test_hdr_bicx4 # downsampling for fast validation
-    dataroot_mask: ../dataset/test_set/test_hdr_bicx4_mask
+    dataroot_mask: ../dataset/test_set/test_sdr_bicx4_mask
     save_img: false
 
 #### network structures

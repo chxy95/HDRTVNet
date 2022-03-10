@@ -10,6 +10,7 @@ datasets:
     mode: LQGT_hallucination
     dataroot_LQ: ../results/local_enhancement/test_set
     dataroot_GT: ../dataset/test_set/test_hdr
+    dataroot_mask: ../dataset/test_set/test_sdr_mask
     
 #### network structures
 network_G:

@@ -39,7 +39,7 @@ Please refer to the [requirements](https://raw.githubusercontent.com/chxy95/HDRT
 ### How to test
 
 We provide the pretrained models to test, which can be downloaded from [Baidu Netdisk](https://pan.baidu.com/s/1OSLVoBioyen-zjvLmhbe2g) (access code: 2me9) or [OneDrive](https://uofmacau-my.sharepoint.com/:f:/g/personal/yc17494_umac_mo/EteMb8FVYE5GqILE2mV-1W8B0-S_ynjt2gAgHkDH9LgkMg?e=EnBn3Q) (access code: HDRTVNet). Since our method is casaded of three steps, the results also need to be inferenced step by step. 
-- Before testing, it is optional to generate the downsampled inputs of the condition network in advance. Make sure the `input_folder` and `save_LR_folder` in `./scripts/generate_mod_LR_bic.m` are correct, then run the file using Matlab. After that, matlab-bicubic-downsampled versions of the input SDR images are generated that will be input to the condition network. Note that this step is not necessary, but can reproduce more precise performance.
+- Before testing, it is optional to generate the downsampled inputs of the condition network in advance. Make sure the `input_folder` and `save_LR_folder` in `./scripts/generate_mod_LR_bic.m` are correct, then run the file using Matlab. After that, matlab-bicubic-downsampled versions of the input SDR images are generated that will be input to the condition network. Note that this step is not necessary, but can reproduce more precise performance. Besides, if the pretrained HG model would be used, you should generate the masks of the input SDR images using `./scripts/generate_mask.py` and modify the corresponding paths in the config files.
 - For the first part of AGCM, make sure the paths of `dataroot_LQ`, `dataroot_cond`, `dataroot_GT` and `pretrain_model_G` in `./codes/options/test/test_AGCM.yml` are correct, then run
 ```
 cd codes
@@ -58,7 +58,7 @@ python test.py -opt options/test/test_HG.yml
 
 ### How to train
 
-- Prepare the data. Generate the sub-images with specific patch size using `./scripts/extract_subimgs_single.py` and generate the down-sampled inputs for the condition network (using the `./scripts/generate_mod_LR_bic.m` or any other methods).
+- Prepare the data. Generate the sub-images with specific patch size using `./scripts/extract_subimgs_single.py` and generate the down-sampled inputs for the condition network (using the `./scripts/generate_mod_LR_bic.m` or any other methods). As the pipeline of the testing process, masks of SDR images need to be generated in advance if the HG part would be trained.
 - For AGCM, make sure that the paths and settings in `./options/train/train_AGCM.yml` are correct, then run
 ```
 cd codes

@@ -91,11 +91,13 @@ If the HDR displayer is not available, some media players with HDR render can pl
 ## Citation
 If our work is helpful to you, please cite our paper:
 
-    @inproceedings{chen2021new,
-      title={A New Journey from SDRTV to HDRTV}, 
-      author={Chen, Xiangyu and Zhang, Zhengwen and Ren, Jimmy S. and Tian, Lynhoo and Qiao, Yu and Dong, Chao},
-      booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
-      year={2021}
+    @InProceedings{Chen_2021_ICCV,
+        author    = {Chen, Xiangyu and Zhang, Zhengwen and Ren, Jimmy S. and Tian, Lynhoo and Qiao, Yu and Dong, Chao},
+        title     = {A New Journey From SDRTV to HDRTV},
+        booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+        month     = {October},
+        year      = {2021},
+        pages     = {4500-4509}
     }
 
 ## Acknowledgment

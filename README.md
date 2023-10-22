@@ -7,7 +7,7 @@ Xiangyu Chen*, Zhengwen Zhang*, [Jimmy S. Ren](https://scholar.google.com.hk/cit
 
 **:star:This paper is accepted to ICCV 2021.**
 
-**:rocket:The repository of extended version [HDRTVNet++](https://arxiv.org/abs/2309.04084) can be found [here](https://github.com/chxy95/HDRTVNet/tree/main).**
+**:rocket:The repository of extended version [HDRTVNet++](https://arxiv.org/abs/2309.04084) can be found [here](https://github.com/xiaom233/HDRTVNet-plus).**
 
 ## Overview
 Simplified SDRTV/HDRTV formation pipeline:
